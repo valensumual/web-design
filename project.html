@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #2d7a2d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+    }
+    .content {
+      flex: 3;
+      padding-right: 20px;
+    }
+    .content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .sidebar {
+      flex: 1;
+      background: #f4f4f4;
+      padding: 20px;
+      border-left: 1px solid #ddd;
+    }
+    h2 {
+      margin-top: 0;
+      color: #2d7a2d;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #444;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th {
+      background: #afb6af;
+      color: rgb(15, 14, 14);
+      padding: 8px;
+    }
+    td {
+      padding: 8px;
+      text-align: center;
+    }
+    /* efek strip warna */
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    tr:nth-child(odd) {
+      background: #ffffff;
+    }
+    form {
+      margin-top: 20px;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #2d7a2d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #256325;
+    }
+    footer {
+      background: #2d7a2d;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER <br>
+    <small>Memuat gabungan antara HTML, CSS, dan JavaScript</small>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Tentang</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h2>Konten Utama</h2>
+      <p>Selamat datang di website untuk belajar Web Design yang menggabungkan antara HTML, CSS dan JavaScript.</p>
+      <img src="images/gedung.jpg" alt="Universitas Klabat">
+
+      <h3>Tabel Data</h3>
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Kota</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Andi</td>
+          <td>Jakarta</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Budi</td>
+          <td>Bandung</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Wilsen</td>
+          <td>Manado</td>
+        </tr>
+      </table>
+
+      <h3>Formulir Pendaftaran</h3>
+      <form>
+        <label>Nama:</label>
+        <input type="text" name="nama" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Pilih Kota:</label>
+        <select name="kota">
+          <option>Jakarta</option>
+          <option>Bandung</option>
+          <option>Manado</option>
+          <option>Medan</option>
+          <option>Makassar</option>
+        </select>
+
+        <label>
+          <input type="checkbox" name="syarat" required> Saya setuju dengan syarat & ketentuan
+        </label>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <div class="sidebar">
+      <h3>Tentang Website</h3>
+      <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi dan JavaScript interaktif.</p>
+      <h3>Menu Sidebar</h3>
+      <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Kontak</a></li>
+      <li><a href="#">Formulir</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Website Latihan
+  </footer>
+</body>
+</html>
