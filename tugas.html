@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</title>
+<style>
+  /* Basic reset */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background:#e6e2dd; /* halaman luar warna beige */
+    color:#111;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* Header besar */
+  .site-header{
+    background:#1f5c2a; /* hijau gelap */
+    color:white;
+    padding:28px 16px;
+    text-align:center;
+  }
+  .site-header h1{
+    font-size:40px;
+    letter-spacing:1px;
+    line-height:1.05;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .site-header p{
+    font-size:18px;
+    opacity:0.95;
+    margin-top:4px;
+  }
+
+  /* Nav bar hitam */
+  .site-nav{
+    background:#222;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:12px 0;
+  }
+  .site-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+  }
+
+  /* Kontainer utama */
+  .container{
+    max-width:1100px;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns: 1fr 300px;
+    gap:24px;
+    padding:0 16px;
+  }
+
+  /* Card konten utama */
+  .main-card{
+    background:#fff;
+    padding:22px;
+    box-shadow:0 2px 0 rgba(0,0,0,0.03);
+    border-left:12px solid transparent;
+  }
+  .main-card h2{
+    font-size:32px;
+    margin-bottom:12px;
+  }
+  .main-card p{font-size:16px; line-height:1.6; margin-bottom:18px;}
+
+  .hero-img{
+    width:100%;
+    max-width:520px;
+    display:block;
+    margin:14px 0 22px 0;
+    border-radius:2px;
+  }
+
+  /* Table */
+  table{
+    border-collapse:collapse;
+    width:100%;
+    margin-bottom:18px;
+  }
+  table th, table td{
+    border:1px solid #3b312d;
+    padding:10px 12px;
+    text-align:left;
+    font-size:16px;
+  }
+  table thead th{
+    background:#d6bfb2; /* header tabel warna cokelat muda */
+    font-weight:700;
+  }
+
+  /* Form style */
+  fieldset.form-box{
+    border:2px solid #000;
+    padding:16px;
+    margin-bottom:18px;
+  }
+  fieldset.form-box legend{font-weight:700; padding:0 6px}
+  .form-row{margin:10px 0;}
+  label{display:block; margin-bottom:6px; font-weight:600;}
+  input[type="text"], input[type="email"], select, textarea{
+    width:100%;
+    padding:8px 10px;
+    border:1px solid #bbb;
+    border-radius:4px;
+    font-size:15px;
+  }
+  textarea{min-height:90px; resize:vertical}
+  .checkbox-row{display:flex; align-items:center; gap:10px; margin-top:8px}
+  .btn{
+    display:inline-block;
+    background:#1f5c2a;
+    color:#fff;
+    padding:10px 16px;
+    border-radius:4px;
+    border:none;
+    cursor:pointer;
+    margin-top:12px;
+    font-weight:700;
+  }
+
+  /* Sidebar */
+  .sidebar{
+    background:#cfcac6; /* abu-abu sidebar */
+    padding:20px;
+  }
+  .sidebar h3{font-size:20px; margin-bottom:8px;}
+  .sidebar p{line-height:1.6; margin-bottom:16px}
+  .sidebar .menu-title{font-weight:700; margin-top:12px;}
+  .sidebar ul{margin-top:8px; padding-left:20px}
+  .sidebar a{color:#0645ad;}
+
+  /* Footer bar */
+  .site-footer{
+    background:#1f5c2a;
+    color:#fff;
+    text-align:center;
+    padding:12px 0;
+    margin-top:28px;
+    font-weight:600;
+  }
+
+  /* Responsive behaviour */
+  @media (max-width:900px){
+    .site-header h1{font-size:36px}
+    .container{grid-template-columns:1fr 280px; gap:18px}
+  }
+  @media (max-width:700px){
+    .site-header h1{font-size:30px}
+    .site-nav{gap:18px; padding:10px 0}
+    .container{grid-template-columns:1fr; padding-bottom:16px}
+    .sidebar{order:2}
+    .main-card{order:1}
+  }
+
+  /* Small visual tweaks to match screenshots */
+  .main-card h2 { color:#000; }
+  .sidebar{min-height:140px}
+  .main-card .section-title{font-size:20px; margin:12px 0 10px}
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>KELAS WEB DESIGN<br>PROJECT UJIAN MID SEMESTER</h1>
+    <p>Memuat gabungan antara HTML, CSS, dan JavaScript</p>
+  </header>
+
+  <nav class="site-nav" role="navigation" aria-label="Main menu">
+    <a href="#home">Home</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- Konten utama -->
+    <section class="main-card" id="home" aria-labelledby="main-title">
+      <h2 id="main-title">Konten Utama</h2>
+      <p>Selamat datang di website untuk belajar Web Design yang menggabungkan HTML, CSS, dan JavaScript.</p>
+
+      <!-- Gambar hero -->
+      <img class="hero-img" src="https://raw.githubusercontent.com/liandysanjaya/li_andy_webdes/main/img/universitas-klabat.jpg"
+           alt="Universitas Klabat" />
+
+      <div class="section">
+        <div class="section-title">Tabel Data</div>
+        <table>
+          <thead>
+            <tr><th>No</th><th>Nama</th><th>Kota</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Andi</td><td>Jakarta</td></tr>
+            <tr><td>2</td><td>Budi</td><td>Bandung</td></tr>
+            <tr><td>3</td><td>Wilsen</td><td>Manado</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Formulir</div>
+
+        <fieldset class="form-box">
+          <legend>Formulir Pendaftaran</legend>
+
+          <div class="form-row">
+            <label for="nama">Nama:</label>
+            <input id="nama" type="text" placeholder="Masukkan nama">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="email@contoh.com">
+          </div>
+
+          <div class="form-row">
+            <label for="kota">Pilih Kota:</label>
+            <select id="kota">
+              <option>Jakarta</option>
+              <option>Surabaya</option>
+              <option>Bandung</option>
+              <option>Manado</option>
+              <option>Medan</option>
+              <option>Bitung</option>
+            </select>
+          </div>
+
+          <div class="checkbox-row">
+            <input id="agree" type="checkbox">
+            <label for="agree" style="margin:0;font-weight:600">Saya setuju dengan syarat dan ketentuan</label>
+          </div>
+
+          <button class="btn" type="button">Kirim</button>
+        </fieldset>
+
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-labelledby="sidebar-title">
+      <h3 id="sidebar-title">Tentang Website</h3>
+      <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi dan JavaScript interaktif.</p>
+
+      <div class="menu-title">Menu Sidebar</div>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#form">Formulir</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    © 2025 Website Latihan
+  </footer>
+
+</body>
+</html>
